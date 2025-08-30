@@ -10,21 +10,21 @@ module.exports = {
     publicPath: '/'
   },
   devServer: {
-    // Configure the development server
+    // Configure the development server to serve content from 'dist' directory
     contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 3000
+    compress: true, // Enable gzip compression for faster asset delivery
+    port: 3000 // Port number for the dev server
   },
   module: {
     rules: [
       {
-        // Apply Babel loader for JS files
-        test: /\.js$/, 
+        // Apply Babel loader for JavaScript files
+        test: \.js$, 
         exclude: /node_modules/, 
         use: {
           loader: 'babel-loader',
           options: {
-            // Babel presets for ES and React
+            // Babel presets for modern JS and React
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
