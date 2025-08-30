@@ -7,7 +7,7 @@ module.exports = {
     // Output bundle file name and path
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: '/' // Public URL address for the output files
   },
   devServer: {
     // Configure the development server to serve content from 'dist' directory
