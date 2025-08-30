@@ -19,7 +19,7 @@ module.exports = {
     rules: [
       {
         // Apply Babel loader for JavaScript files
-        test: \.js$, 
+        test: /\.js$/, 
         exclude: /node_modules/, 
         use: {
           loader: 'babel-loader',
