@@ -1,30 +1,30 @@
 const path = require('path');
 
 module.exports = {
-  // Entry point for the application
+  // Point d'entrée de l'application
   entry: './src/index.js',
   output: {
-    // Output bundle file name and path
+    // Nom et chemin du fichier de sortie
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/' // Public URL address for the output files
+    publicPath: '/' // Adresse URL publique pour les fichiers de sortie
   },
   devServer: {
-    // Configure the development server to serve content from 'dist' directory
+    // Configure le serveur de développement pour servir du contenu à partir du répertoire 'dist'
     contentBase: path.join(__dirname, 'dist'),
-    compress: true, // Enable gzip compression for faster asset delivery
-    port: 3000 // Port number for the dev server
+    compress: true, // Active la compression gzip pour une livraison des ressources plus rapide
+    port: 3000 // Numéro de port pour le serveur de développement
   },
   module: {
     rules: [
       {
-        // Apply Babel loader for JavaScript files
-        test: /\.js$/, 
+        // Appliquer le chargeur Babel pour les fichiers JavaScript
+        test: \.js$, 
         exclude: /node_modules/, 
         use: {
           loader: 'babel-loader',
           options: {
-            // Babel presets for modern JS and React
+            // Préréglages Babel pour JS moderne et React
             presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
